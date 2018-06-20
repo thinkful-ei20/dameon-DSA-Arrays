@@ -107,7 +107,8 @@ function main(){
   
   console.log(TammysArr.get(0));
   TammysArr.remove(0);
-  TammysArr.push(4);
+  TammysArr.push('Tauhida');
+  console.log(TammysArr.get(0));
   console.log(TammysArr);
   return TammysArr;
 }
@@ -119,6 +120,6 @@ let tammysArr = main();
 
 
 //let item1 = [1,0,0]
-//let item4 =        ^[1,2,3,4,0,0,0,0,0,0,0,0,0]
+//let item4 =        ^[3,0,0,0,0,0,0,0,0,0,0,0,0]
 //let item13 =                                   ^[1,2,3,4,5,6,7,8,9,10,11,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
