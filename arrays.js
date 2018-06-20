@@ -80,6 +80,7 @@ function main(){
   //add an item to the array
   
   TammysArr.push(3);
+  console.log(TammysArr);
   //The length is 1, Capasity is 3 , Mem Address is 0
   
   TammysArr.push(5);
@@ -89,20 +90,35 @@ function main(){
   //The length is 3, Capasity is 3 , Mem Address is 0
   
   TammysArr.push(19);
-  //The length is 4, Capasity is 12 , Mem Address is 3
-  
   console.log(TammysArr);
-  //The length is 5, Capasity is 12 , Mem Address is 3
+  //The length is 4, Capasity is 12 , Mem Address is 3
+  //This item creates a copy of the first array, finds the next available spot, puts the new Array there
+  
+  TammysArr.pop();
+  //The length is 3, Capasity is 12 , Mem Address is 3
+  //Even though the length has gone down , nothing is done
 
+  TammysArr.pop();
+  //The length is 2, Capasity is 12 , Mem Address is 3
+
+  TammysArr.pop();
+  console.log(TammysArr);
+  //The length is 1, Capasity is 12 , Mem Address is 3
   
-  
+  console.log(TammysArr.get(0));
+  TammysArr.remove(0);
+  TammysArr.push(4);
+  console.log(TammysArr);
+  return TammysArr;
 }
-main();
+let tammysArr = main();
+//console.log(tammysArr.get(0));
+//Visual example of memory allocations.
+//Item one starts at 0, Item 4 starts at 3, Item 13 starts at 12.
 
 
-//Visual example of memory allocations
-//Item one starts at 0, Item 4 starts at 3, Item 13 starts at 12
 
 //let item1 = [1,0,0]
 //let item4 =        ^[1,2,3,4,0,0,0,0,0,0,0,0,0]
 //let item13 =                                   ^[1,2,3,4,5,6,7,8,9,10,11,12,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
